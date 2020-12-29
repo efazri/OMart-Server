@@ -43,7 +43,7 @@ class UserController {
                 } else {
                     const validatePassword = bcryptjs.compareSync(password, user.password)
                     if (validatePassword) {
-                        const access_token = jwt.sign({ id, name, email, role }, `JWT_SECRET`) 
+                        const access_token = jwt.sign({ id, name, email, role }, process.env.JWT_SECRET) 
                         res.status(200).json({ access_token })
                     } else {
                         throw { name: `email/password is wrong`}
@@ -52,7 +52,7 @@ class UserController {
                 
             })
             .catch( err => {
-                console.log(err)
+                next(err)
             })
     }
 }
