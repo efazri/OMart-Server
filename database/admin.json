@@ -1,0 +1,17 @@
+[
+    {
+        "name"      : "Admin1",
+        "email"     : "admin1@mail.com",
+        "password"  : "admin12020",
+        "address"   : "Jakarta",
+        "role"      : "admin"
+    },
+    {
+        "name"      : "Admin2",
+        "email"     : "admin2@mail.com",
+        "password"  : "admin22020",
+        "address"   : "Jakarta",
+        "role"      : "admin"
+    }
+
+]
